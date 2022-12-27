@@ -55,10 +55,10 @@ def scan_network(network, subnet):
       }
       devices.append(device)
       #Tarama işlemini bitirin
-      print("Tarama tamamlandı.")
-      return devices
+      #print("Tarama tamamlandı.")
+      #return devices
 
-def display_device_info(device):
+def display_device_info(devices):
   for device in devices:
       print("IP Adresi:", device["ip_address"])
       print("Cihaz Türü:", device["device_type"])
@@ -78,6 +78,9 @@ def generate_report(devices):
   with open("report.txt", "w") as file:
     file.write(report)
   print("Rapor oluşturuldu: report.txt")
+  #Tarama işlemini bitirin
+  print("Tarama tamamlandı.")
+  return devices
 
 def main():
   while True:
