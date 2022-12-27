@@ -8,7 +8,7 @@ import os
 def scan_network(network, subnet):
   # Ağınızdaki cihazları taramak için bir aralık belirleyin
   start = 1
-  end = 254
+  end = 255
   devices = []
   
   # Ağınızdaki cihazları taramaya başlayın
@@ -54,9 +54,7 @@ def scan_network(network, subnet):
       "outdated_software": outdated_software
       }
       devices.append(device)
-      #Tarama işlemini bitirin
-      #print("Tarama tamamlandı.")
-      #return devices
+      
 
 def display_device_info(devices):
   for device in devices:
