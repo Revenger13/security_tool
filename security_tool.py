@@ -94,11 +94,11 @@ def main():
     if selection == "1":
       network = input("Enter the network IP address: ")
       subnet = input("Enter the subnet mask: ")
-      devices = scan_network(network, subnet)
+      device = scan_network(network, subnet)
     elif selection == "2":
-      display_device_info(devices)
+      display_device_info(device)
     elif selection == "3":
-      generate_report(devices)
+      generate_report(device)
     elif selection == "4":
       sys.exit()
     else:
