@@ -78,9 +78,7 @@ def generate_report(devices):
   with open("report.txt", "w") as file:
     file.write(report)
   print("Rapor oluşturuldu: report.txt")
-  #Tarama işlemini bitirin
-  print("Tarama tamamlandı.")
-  return devices
+  
 
 def main():
   while True:
