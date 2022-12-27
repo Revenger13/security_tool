@@ -19,6 +19,9 @@ for host in range(start, end+1):
   address = network + str(host)
   s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
   s.settimeout(0.5)
+
+  os.system("clear")
+  os.system("figlet F4KOR4LL AG GUVENLIGI TOOLU")
   
   # Eğer cihaz yanıt verirse, cihazın IP adresini ve cihaz türünü ekrana yazdırın
   if s.connect_ex((address, 135)):
