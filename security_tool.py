@@ -25,25 +25,25 @@ def scan_network(network, subnet):
       cmd = "nmap -O " + address
       proc = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE)
       result = proc.stdout.read()
-      device_type = result.decode("utf-8").split("\n")[255]
+      device_type = result.decode("utf-8").split("\n")[-2]
       
       # Cihaz üzerinde açık portları tespit etmek için nmap kullanın
       cmd = "nmap -p- " + address
       proc = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE)
       result = proc.stdout.read()
-      open_ports = result.decode("utf-8").split("\n")[255]
+      open_ports = result.decode("utf-8").split("\n")[-2]
       
       # Cihaz üzerinde çalışan servisleri tespit etmek için nmap kullanın
       cmd = "nmap -sV " + address
       proc = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE)
       result = proc.stdout.read()
-      services = result.decode("utf-8").split("\n")[255]
+      services = result.decode("utf-8").split("\n")[-2]
       
       # Cihaz üzerinde güncel olmayan yazılım ve servisler tespit etmek için nessus kullanın
       cmd = "nessus " + address
       proc = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE)
       result = proc.stdout.read()
-      outdated_software = result.decode("utf-8").split("\n")[255]
+      outdated_software = result.decode("utf-8").split("\n")[-2]
   
       # Cihaz bilgilerini saklayın
       device = {
