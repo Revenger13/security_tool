@@ -81,7 +81,7 @@ def generate_report(devices):
 
 def main():
   while True:
-    os.system("Ağ Güvenlik Test Aracı")
+    print("Ağ Güvenlik Test Aracı")
     print("1. Ağı tarama")
     print("2. Cihaz bilgilerini görüntüle")
     print("3. Rapor oluştur")
