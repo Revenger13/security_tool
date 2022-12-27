@@ -58,7 +58,7 @@ def scan_network(network, subnet):
       print("Tarama tamamlandı.")
       return devices
 
-def display_device_info(devices):
+def display_device_info(device):
   for device in devices:
       print("IP Adresi:", device["ip_address"])
       print("Cihaz Türü:", device["device_type"])
@@ -70,7 +70,7 @@ def generate_report(devices):
   report = ""
   for device in devices:
     report += "IP Adresi: " + device["ip_address"] + "\n"
-    report += "Cihaz Türü: " + device["type"] + "\n"
+    report += "Cihaz Türü: " + device["device_type"] + "\n"
     report += "Açık Portlar: " + device["open_ports"] + "\n"
     report += "Çalışan Servisler: " + device["services"] + "\n"
     report += "Güncel Olmayan Yazılım ve Servisler: " + device["outdated_software"] + "\n"
