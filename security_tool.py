@@ -5,31 +5,6 @@ import sys
 import subprocess
 import os
 
-def main():
-  while True:
-    print("Ağ Güvenlik Test Aracı")
-    print("1. Ağı tarama")
-    print("2. Cihaz bilgilerini görüntüle")
-    print("3. Rapor oluştur")
-    print("4. Çıkış")
-    choice = input("Seçiminiz: ")
-    
-    if choice == "1":
-      network = input("Enter the network IP address: ")
-      subnet = input("Enter the subnet mask: ")
-      scan_network(network, subnet)
-    elif choice == "2":
-      display_device_info(devices)
-    elif choice == "3":
-      generate_report(devices)
-    elif choice == "4":
-      sys.exit()
-    else:
-      print("Geçersiz seçim.")
-      
-if __name__ == "__main__":
-  main()
-
 def scan_network(network, subnet):
   # Ağınızdaki cihazları taramak için bir aralık belirleyin
   start = 1
@@ -82,7 +57,34 @@ def scan_network(network, subnet):
       #Tarama işlemini bitirin
       print("Tarama tamamlandı.")
       return devices
+
+def main():
+  while True:
+    print("Ağ Güvenlik Test Aracı")
+    print("1. Ağı tarama")
+    print("2. Cihaz bilgilerini görüntüle")
+    print("3. Rapor oluştur")
+    print("4. Çıkış")
+    choice = input("Seçiminiz: ")
+    
+    if choice == "1":
+      network = input("Enter the network IP address: ")
+      subnet = input("Enter the subnet mask: ")
+      scan_network(network, subnet)
+    elif choice == "2":
+      display_device_info(devices)
+    elif choice == "3":
+      generate_report(devices)
+    elif choice == "4":
+      sys.exit()
+    else:
+      print("Geçersiz seçim.")
       
+if __name__ == "__main__":
+  main()
+
+
+
 def display_device_info(devices):
   for device in devices:
       print("IP Adresi:", device["ip_address"])
