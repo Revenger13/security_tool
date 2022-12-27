@@ -5,6 +5,32 @@ import sys
 import subprocess
 import os
 
+def main():
+  while True:
+    print("Ağ Güvenlik Test Aracı")
+    print("1. Ağı tarama")
+    print("2. Cihaz bilgilerini görüntüle")
+    print("3. Rapor oluştur")
+    print("4. Çıkış")
+    choice = input("Seçiminiz: ")
+    
+    if choice == "1":
+      network = input("Enter the network IP address: ")
+      subnet = input("Enter the subnet mask: ")
+      scan_network(network, subnet)
+    elif choice == "2":
+      display_device_info(devices)
+    elif choice == "3":
+      generate_report(devices)
+    elif choice == "4":
+      sys.exit()
+    else:
+      print("Geçersiz seçim.")
+      
+if __name__ == "__main__":
+  main()
+
+
 # Ağınızın IP adresini ve alt ağ maskesini girin
 network = "192.168.1.0"
 subnet = "255.255.255.0"
@@ -20,12 +46,6 @@ for host in range(start, end+1):
   s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
   s.settimeout(0.5)
 
-  os.system("clear")
-  os.system("figlet F4KOR4LL AG GUVENLIGI TOOLU")
-
-  address = (input("IP Hedefi : "))
-  
-  
   # Eğer cihaz yanıt verirse, cihazın IP adresini ve cihaz türünü ekrana yazdırın
   if s.connect_ex((address, 135)):
     print(address + " çalışıyor")
