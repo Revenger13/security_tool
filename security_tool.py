@@ -22,6 +22,9 @@ for host in range(start, end+1):
 
   os.system("clear")
   os.system("figlet F4KOR4LL AG GUVENLIGI TOOLU")
+
+  address = (input("IP Hedefi : "))
+  
   
   # Eğer cihaz yanıt verirse, cihazın IP adresini ve cihaz türünü ekrana yazdırın
   if s.connect_ex((address, 135)):
