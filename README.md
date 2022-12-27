@@ -14,8 +14,11 @@ Kurulum
 Bu araç, Python 3 ile yazılmıştır. Öncelikle, Python 3'ün kurulu olduğundan emin olun. Daha sonra, aşağıdaki komutları kullanarak gerekli kütüphaneleri yükleyin:
 
 pip install socket
+
 pip install sys
+
 pip install subprocess
+
 pip install os
 
 Kullanım
