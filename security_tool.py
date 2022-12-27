@@ -25,7 +25,7 @@ def scan_network(network, subnet):
       cmd = "nmap -O " + address
       proc = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE)
       result = proc.stdout.read()
-      device_type = result.decode("utf-8").split("\n")[-1]
+      device_type = result.decode("utf-8").split("\n")[-2]
       
       # Cihaz üzerinde açık portları tespit etmek için nmap kullanın
       cmd = "nmap -p- " + address
