@@ -61,7 +61,7 @@ def scan_network(network, subnet):
 def display_device_info(devices):
   for device in devices:
       print("IP Adresi:", device["ip_address"])
-      print("Cihaz Türü:", device["type"])
+      print("Cihaz Türü:", device["device_type"])
       print("Açık Portlar:", device["open_ports"])
       print("Çalışan Servisler:", device["services"])
       print("Güncel Olmayan Yazılım ve Servisler:", device["outdated_software"])
