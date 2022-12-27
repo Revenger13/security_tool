@@ -22,6 +22,8 @@ Kullanım
 
 Araç, aşağıdaki şekilde çalıştırılabilir:
 
+git clone https://github.com/F4KOR4LL/security_tool.git
+cd security_tool
 python security_tool.py
 
 Araç çalıştırıldıktan sonra, ağınızın IP adresini ve alt ağ maskesini girmeniz istenecektir. Bu bilgileri girdikten sonra, ağınızdaki cihazlar taranmaya başlayacaktır. Tarama sonucu, ekrana yazdırılacaktır.
