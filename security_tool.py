@@ -86,7 +86,7 @@ def main():
     print("2. Cihaz bilgilerini görüntüle")
     print("3. Rapor oluştur")
     print("4. Çıkış")
-    choice = input("Seçiminiz: ")
+    selection = input("Seçiminiz: ")
     
     if selection == "1":
       network = input("Enter the network IP address: ")
