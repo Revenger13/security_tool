@@ -27,8 +27,8 @@ def main():
     else:
       print("Geçersiz seçim.")
       
-if __name__ == "__main__":
-  main()
+#if __name__ == "__main__":
+ # main()
 
 def scan_network(network, subnet):
   # Ağınızdaki cihazları taramak için bir aralık belirleyin
