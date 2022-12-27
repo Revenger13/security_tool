@@ -101,8 +101,5 @@ def main():
       sys.exit()
     else:
         print("Geçersiz seçim.")
-
-      
-if __name__ == "__main__":
-  main()
+        main()
   
