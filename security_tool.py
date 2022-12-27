@@ -58,33 +58,6 @@ def scan_network(network, subnet):
       print("Tarama tamamlandı.")
       return devices
 
-def main():
-  while True:
-    print("Ağ Güvenlik Test Aracı")
-    print("1. Ağı tarama")
-    print("2. Cihaz bilgilerini görüntüle")
-    print("3. Rapor oluştur")
-    print("4. Çıkış")
-    choice = input("Seçiminiz: ")
-    
-    if choice == "1":
-      network = input("Enter the network IP address: ")
-      subnet = input("Enter the subnet mask: ")
-      scan_network(network, subnet)
-    elif choice == "2":
-      display_device_info(devices)
-    elif choice == "3":
-      generate_report(devices)
-    elif choice == "4":
-      sys.exit()
-    else:
-      print("Geçersiz seçim.")
-      
-if __name__ == "__main__":
-  main()
-
-
-
 def display_device_info(devices):
   for device in devices:
       print("IP Adresi:", device["ip_address"])
@@ -106,4 +79,29 @@ def generate_report(devices):
     file.write(report)
   print("Rapor oluşturuldu: report.txt")
 
+def main():
+  while True:
+    os.system("Ağ Güvenlik Test Aracı")
+    print("1. Ağı tarama")
+    print("2. Cihaz bilgilerini görüntüle")
+    print("3. Rapor oluştur")
+    print("4. Çıkış")
+    choice = input("Seçiminiz: ")
+    
+    if selection == "1":
+      network = input("Enter the network IP address: ")
+      subnet = input("Enter the subnet mask: ")
+      devices = scan_network(network, subnet)
+    elif selection == "2":
+      display_device_info(devices)
+    elif selection == "3":
+      generate_report(devices)
+    elif selection == "4":
+      sys.exit()
+    else:
+        print("Geçersiz seçim.")
+
+      
+if __name__ == "__main__":
+  main()
   
