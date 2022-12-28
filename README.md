@@ -13,23 +13,23 @@ Tarama sonucunu ekrana yazdırır.**
 
 **Bu araç, Python 3 ile yazılmıştır. Öncelikle, Python 3'ün kurulu olduğundan emin olun. Daha sonra, aşağıdaki komutları kullanarak gerekli kütüphaneleri yükleyin:**
 
--`pip install socket`
+- `pip install socket`
 
--`pip install sys`
+- `pip install sys`
 
--`pip install subprocess`
+- `pip install subprocess`
 
--`pip install os`
+- `pip install os`
 
 # Kullanım
 
 *Araç, aşağıdaki şekilde çalıştırılabilir:*
 
--`git clone https://github.com/F4KOR4LL/security_tool.git`
+- `git clone https://github.com/F4KOR4LL/security_tool.git`
 
--`cd security_tool`
+- `cd security_tool`
 
--`python security_tool.py`
+- `python security_tool.py`
 
 *Araç çalıştırıldıktan sonra, ağınızın IP adresini ve alt ağ maskesini girmeniz istenecektir. Bu bilgileri girdikten sonra, ağınızdaki cihazlar taranmaya başlayacaktır. Tarama sonucu, ekrana yazdırılacaktır.*
 
