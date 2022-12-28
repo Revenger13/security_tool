@@ -1,0 +1,22 @@
+###Çekme İsteği Şablonu
+
+##Özet
+
+Bu çekme isteği, [proje adı] için [özet].
+
+###Değişiklikler
+
+[Değişiklik 1]
+[Değişiklik 2]
+[Değişiklik 3]
+
+###Kontrol Listesi
+
+ Kodun test edilmiş olduğuna dair kanıtlar mevcut mu?
+ Tüm yeni ve değiştirilen kodlar için okunabilir, anlaşılır ve kurallara uygun bir şekilde yazılmış mı?
+ Değişikliklerin ne tür bir etkiye neden olduğu hakkında bir açıklama yapılmış mı?
+ Çekme isteği, projenin lisansı koşullarına uygun mu?
+
+###Ek Notlar
+
+[Ek notlar]
